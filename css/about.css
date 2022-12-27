@@ -16,6 +16,11 @@ html {
 
 /* Text Styles */
 
+.title-xl {
+    font-size: 48px;
+    font-weight: 500;
+}
+
 .title-l {
     font-size: 40px;
     font-weight: 500;
@@ -28,10 +33,21 @@ html {
     line-height: 145%;
 }
 
+.title-s {
+    font-size: 24px;
+    font-weight: 400;
+}
+
 .paragraph-m-m {
     font-weight: 500;
     font-size: 20px;
     line-height: 24px;
+}
+
+.paragraph-m-xs {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 145%;
 }
 
 .paragraph-m-xxs {
@@ -140,7 +156,7 @@ header {
 #navbar {
     background-color: rgba(242, 243, 244, 0.7);
     backdrop-filter: blur(10px);
-    width: 90vw - 32px;
+    width: calc(90vw - 32px);
     max-width: 1132px;
     margin: 0px auto;
     border-radius: 24px;
