@@ -2,28 +2,20 @@ html {
     scroll-behavior: smooth;
 }
 
-@font-face {
-    font-family: "Everett";
-    src: url(../fonts/Everett-Regular.otf);
-    font-weight: 400;
-}
-
-@font-face {
-    font-family: "Everett";
-    src: url(../fonts/Everett-Medium.otf);
-    font-weight: 500;
-}
-
 /* Text Styles */
 
 .title-xl {
-    font-size: 48px;
-    font-weight: 500;
+    font-family: "Averia Serif Libre", serif;
+    font-size: 64px;
+    font-weight: 700;
+    font-style: normal;
 }
 
 .title-l {
+    font-family: "Averia Serif Libre", serif;
+    font-weight: 700;
+    font-style: normal;
     font-size: 40px;
-    font-weight: 500;
     line-height: 135%;
 }
 
@@ -36,8 +28,8 @@ html {
 
 .title-s {
     font-family: "Inter", sans-serif;
-    font-size: 20px;
-    font-weight: 400;
+    font-size: 18px;
+    font-weight: 300;
     line-height: 145%;
 }
 
@@ -63,49 +55,49 @@ html {
 
 .paragraph-r-s {
     font-family: "Inter", sans-serif;
-    font-weight: 400;
+    font-weight: 300;
     font-size: 18px;
     line-height: 150%;
 }
 
 .paragraph-r-xs {
     font-family: "Inter", sans-serif;
-    font-weight: 400;
+    font-weight: 300;
     font-size: 16px;
     line-height: 145%;
 }
 
 .paragraph-r-xxs {
     font-family: "Inter", sans-serif;
-    font-weight: 400;
+    font-weight: 300;
     font-size: 14px;
 }
 
 .quote {
-    font-family: "Crimson Text", serif;
+    font-family: "Cormorant Garamond", serif;
     font-style: italic;
-    font-size: 20px;
-    font-weight: normal;
+    font-size: 22px;
+    font-weight: 400;
     line-height: 145%;
-    max-width: 976px;
+    max-width: 85ch;
 }
 
 /* Color Styles */
 
 .light-grey {
-    color: #F2F3F4;
+    color: #a8a9a9;
 }
 
 .medium-grey {
-    color: #B6B7BD;
+    color: #63635E;
 }
 
 .dark-grey {
-    color: #848690;
+    color: #454540;
 }
 
 .blue {
-    color: #219925;
+    color: #0048F9;
 }
 
 /* Component Styles */
@@ -155,19 +147,16 @@ html {
 /* Body */
 
 body {
-    font-family: Everett, Helvetica, san-serif;
+    font-family: "Inter", sans-serif;
     font-weight: 400;
-    background-color: #000;
-    color: #F2F3F4;
+    background-color: #FDFDFC;
+    color: #222222;
 }
 
 /* Navbar */
 
 header {
     padding: 24px 0px;
-    position: fixed;
-    z-index: 1000;
-    top: 0;
     width: 100%;
 }
 
@@ -180,30 +169,26 @@ header {
 }
 
 #navbar {
-    background-color: rgba(0, 0, 0, 0.7);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    width: calc(90vw - 32px);
-    max-width: 1132px;
+    width: 90vw;
+    max-width: 1168px;
     margin: 0px auto;
-    border-radius: 24px;
-    padding: 12px 12px 12px 24px;
+    padding: 12px 24px;
     justify-content: space-between;
     display: flex;
     align-items: center;
 }
 
 #logo {
-    font-weight: 500;
+    font-family: "Averia Serif Libre", serif;
+    font-weight: 700;
     font-size: 20px;
     line-height: 24px;
-    color: #F2F3F4;
+    color: #222222;
     transition: all 0.3s ease-in-out;
 }
 
 #logo:hover {
-    color: #219925;
+    color: #0048F9;
 }
 
 nav {
@@ -214,26 +199,25 @@ nav {
 
 .navlink {
     display: inline-flex;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 16px;
-    color: #848690;
+    color: #222222;
     transition: all 0.3s ease-in-out;
 }
 
 .navlink-current {
     display: inline-flex;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 16px;
-    color: #219925;
+    color: #0048F9;
 }
 
 
 .navlink:hover {
-    color: #219925;
+    color: #0048F9;
 }
 
 #contact-button-desktop {
-    background: #219925;
     color: #F2F3F4;
     padding: 16px 24px;
     border-radius: 18px;
@@ -260,43 +244,39 @@ nav {
 /* Hero */
 
 #hero {
-    width: 90vw;
     max-width: 1168px;
     margin: auto;
     display: flex;
     flex-direction: column;
     gap: 24px;
-    padding: 273px 0 0 0;
+    padding: 96px 0 0 0;
 }
 
 #title {
     display: flex;
     flex-direction: column;
     gap: 8px;
-    max-width: 70ch;
     padding: 0 24px 0 24px;
-}
-
-#hero-image {
-    width: 90vw;
-    max-width: 1168px;
-    margin: 152px auto 0 auto;
-    scroll-margin-top: 132px;
-}
-
-#hero-image img {
-    width: 100%;
+    text-align: center;
 }
 
 /* About intro */
 #about-intro {
     width: 90vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     max-width: 1168px;
     margin: 152px auto 0 auto;
+    gap: 40px;
+}
+
+#about-intro img {
+    width: 50%;
+    max-width: 450px;
 }
 
 #about-intro h2 {
-    max-width: 58ch;
     padding: 0 24px 0 24px;
 }
 
@@ -306,7 +286,15 @@ nav {
     width: 90vw;
     max-width: 1168px;
     margin: 152px auto 0 auto;
-    scroll-margin-top: 132px;
+    display: flex;
+    flex-direction: column;
+    gap: 152px;
+    align-items: center;
+}
+
+#talks p {
+    text-align: left;
+    max-width: 65ch;
 }
 
 #talks img {
@@ -321,19 +309,24 @@ nav {
     text-align: center;
     display: flex;
     flex-direction: column;
-    gap: 48px;
+    align-items: center;
+    gap: 32px;
 }
 
 .author {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 8px;
+}
+
+img.blanco-negro {
+    filter: grayscale(100%);
 }
 
 /* Experience */
 #experience {
     width: 90vw;
-    max-width: 976px;
+    max-width: 722px;
     margin: 152px auto 0 auto;
     scroll-margin-top: 132px;
     display: flex;
@@ -358,7 +351,7 @@ nav {
 /* Footer */
 footer {
     width: 90vw;
-    max-width: 1120px;
+    max-width: 1168px;
     margin: 152px auto 24px auto;
     display: flex;
     flex-direction: column;
@@ -379,101 +372,10 @@ footer {
 }
 
 .copyright a:hover {
-    color: #219925;
+    color: #0048F9;
 }
 
 /* Responsive Design */
-
-@media (max-width: 991px) {
-
-    /* Text Styles */
-
-    .title-xl {
-        font-size: 40px;
-        font-weight: 500;
-        line-height: 135%;
-    }
-
-    .title-l {
-        font-size: 32px;
-        font-weight: 500;
-        line-height: 135%;
-    }
-
-    .title-m {
-        font-size: 24px;
-        font-weight: 400;
-        line-height: 135%;
-    }
-
-    .title-s {
-        font-size: 20px;
-        font-weight: 400;
-        line-height: 135%;
-    }
-
-    .paragraph-m-m {
-        font-weight: 500;
-        font-size: 18px;
-        line-height: 24px;
-    }
-
-    .paragraph-m-xs {
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 24px;
-    }
-
-    .paragraph-r-s {
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 150%;
-    }
-
-    .paragraph-r-xs {
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 145%;
-    }
-
-    /* Navbar */
-
-    #navbar {
-        width: calc(100vw - 60px);
-        padding: 12px 12px 12px 16px;
-    }
-
-    /* Hero */
-
-    #hero {
-        width: calc(100vw - 32px);
-        padding: 273px 16px 0 16px;
-        gap: 48px;
-    }
-
-    #title {
-        padding: 0 16px;
-    }
-
-    #hero-image {
-        width: calc(100vw - 32px);
-    }
-
-    /* About intro */
-    #about-intro {
-        width: calc(100vw - 32px);
-    }
-
-    #about-intro h2 {
-        max-width: none;
-        padding: 0 16px 0 16px;
-    }
-
-    /* Talks */
-    #talks {
-        width: calc(100vw - 32px);
-    }
-}
 
 @media (max-width: 767px) {
 
@@ -484,6 +386,13 @@ footer {
     }
 
     /* Text Styles */
+
+    .title-xl {
+        font-family: "Averia Serif Libre", serif;
+        font-size: 40px;
+        font-weight: 700;
+        font-style: normal;
+    }
 
     .title-l {
         font-size: 24px;
@@ -498,8 +407,8 @@ footer {
     }
 
     .title-s {
-        font-size: 16px;
-        font-weight: 400;
+        font-size: 14px;
+        font-weight: 300;
         line-height: auto;
     }
 
@@ -634,8 +543,16 @@ footer {
     /* Hero */
 
     #hero {
-        padding: 152px 16px 0 16px;
-        gap: 24px
+        width: calc(100vw - 64px);
+        padding: 0px 16px 0 16px;
+        gap: 24px;
+        align-items: flex-start;
+    }
+
+    #title {
+        text-align: left;
+        padding: 0;
+        gap: 12px;
     }
 
     #hero-image {
@@ -644,18 +561,42 @@ footer {
 
     /* About intro */
     #about-intro {
-        margin: 72px auto 0 auto;
+        width: calc(100vw - 64px);
+        margin: 48px auto 0 auto;
+        flex-direction: column;
+        gap: 48px;
+        align-items: center;
+    }
+
+    #about-intro img {
+        width: 100%;
+    }
+
+    #about-intro h2 {
+        padding: 0;
+        text-align: left;
     }
 
     /* Talks */
     #talks {
-        margin: 72px auto 0 auto;
+        width: calc(100vw - 64px);
+        margin: 24px auto 0 auto;
+        gap: 40px;
+        align-items: flex-start;
+    }
+
+    #talks p {
+        text-align: left;
     }
 
     /* Quote */
     #quote {
+        width: calc(100vw - 64px);
         margin: 72px auto 0 auto;
         gap: 24px;
+        text-align: left;
+        padding: 0 16px;
+        text-align: center;
     }
 
     .author {
@@ -664,13 +605,29 @@ footer {
 
     /* Experience */
     #experience {
+        width: calc(100vw - 64px);
         margin: 72px auto 0 auto;
+        gap: 32px;
+    }
+
+    .experience-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
     }
 
     /* Footer */
 
     footer {
+        width: calc(100vw - 64px);
         margin: 72px auto 24px auto;
         gap: 72px;
+        padding: 0 16px;
+    }
+
+    .copyright {
+        flex-direction: column;
+        gap: 16px;
+        align-items: flex-start;
     }
 }
