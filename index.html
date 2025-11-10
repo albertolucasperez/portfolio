@@ -29,18 +29,16 @@
                 <a class="navlink" target=”_blank” href="Alberto Lucas.pdf">Resume</a>
                 <a class="navlink" target=”_blank” href="https://www.linkedin.com/in/alberto-lucas-perez/">Linkedin</a>
                 <a class="navlink" href="mailto:albertolucasperez@gmail.com">Email</a>
-                <a id="contact-button-mobile" href="">Menu</a>
+                <label id="contact-button-mobile" for="mobile-menu-toggle">Menu</label>
             </nav>
         </div>
-        <div id="container">
-            <input type="checkbox" class="check">
-            <div id="mobile-navbar">
-                <a class="navlink-mobile" href="Alberto Lucas.pdf">Resume</a>
-                <a class="navlink-mobile" target=”_blank”
-                    href="https://www.linkedin.com/in/alberto-lucas-perez/">Linkedin</a>
-                <a class="navlink-mobile" href="mailto:albertolucasperez@gmail.com">Email</a>
-                <div id="contact-button-close">Close</div>
-            </div>
+        <input type="checkbox" id="mobile-menu-toggle" class="check">
+        <div id="mobile-navbar">
+            <a class="navlink-mobile" href="Alberto Lucas.pdf">Resume</a>
+            <a class="navlink-mobile" target=”_blank”
+                href="https://www.linkedin.com/in/alberto-lucas-perez/">Linkedin</a>
+            <a class="navlink-mobile" href="mailto:albertolucasperez@gmail.com">Email</a>
+            <label id="contact-button-close" for="mobile-menu-toggle" aria-label="Close menu">×</label>
         </div>
     </header>
 
@@ -139,6 +137,16 @@
         </div>
     </footer>
 
+    <script>
+        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+        const docRoot = document.documentElement;
+
+        mobileMenuToggle?.addEventListener('change', () => {
+            [document.body, docRoot].forEach((node) => {
+                node.classList.toggle('menu-open', mobileMenuToggle.checked);
+            });
+        });
+    </script>
 </body>
 
 </html>
