@@ -132,9 +132,6 @@ html {
     height: 49px;
 }
 
-.rounded-24 {
-    border-radius: 24px;
-}
 
 .contact {
     max-width: 20ch;
@@ -473,10 +470,10 @@ footer {
         z-index: 1500;
         -webkit-user-select: none;
         user-select: none;
-        transform: translateY(-100%);
+        transform: none;
         opacity: 0;
         pointer-events: none;
-        transition: transform 0.35s ease, opacity 0.35s ease;
+        transition: opacity 0.35s ease;
     }
 
     .check {
@@ -490,7 +487,6 @@ footer {
     }
 
     .check:checked~#mobile-navbar {
-        transform: translateY(0);
         opacity: 1;
         pointer-events: auto;
     }

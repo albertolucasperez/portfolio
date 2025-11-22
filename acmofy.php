@@ -13,10 +13,11 @@ if (!isset($_SESSION['auth']) || $_SESSION['auth'] !== true) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap');
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/product-design.css">
     <link rel="icon" type="image/x-icon" href="images/favicon.png">
     <title>Alberto Lucas - Acmofy</title>
@@ -29,46 +30,48 @@ if (!isset($_SESSION['auth']) || $_SESSION['auth'] !== true) {
                 <p>Alberto Lucas</p>
             </a>
             <nav>
+                <a class="navlink-current" href="work.php">Work</a>
                 <a class="navlink" target=”_blank” href="Alberto Lucas.pdf">Resume</a>
                 <a class="navlink" target=”_blank” href="https://www.linkedin.com/in/alberto-lucas-perez/">Linkedin</a>
-                <a id="contact-button-desktop" href="mailto:albertolucasperez@gmail.com">Contact</a>
-                <a id="contact-button-mobile" href="">Menu</a>
+                <a class="navlink" href="mailto:albertolucasperez@gmail.com">Email</a>
+                <label id="contact-button-mobile" for="mobile-menu-toggle">Menu</label>
             </nav>
         </div>
         <div id="container">
-            <input type="checkbox" class="check">
+            <input type="checkbox" id="mobile-menu-toggle" class="check">
             <div id="mobile-navbar">
+                <a class="navlink-mobile" href="work.php">Work</a>
                 <a class="navlink-mobile" href="Alberto Lucas.pdf">Resume</a>
                 <a class="navlink-mobile" target=”_blank”
                     href="https://www.linkedin.com/in/alberto-lucas-perez/">Linkedin</a>
-                <a class="navlink-mobile contact-button" href="mailto:albertolucasperez@gmail.com">Contact</a>
-                <div id="contact-button-close">Close</div>
+                <a class="navlink-mobile" href="mailto:albertolucasperez@gmail.com">Email</a>
+                <label id="contact-button-close" for="mobile-menu-toggle" aria-label="Close menu">×</label>
             </div>
     </header>
     <main>
         <section id="hero">
             <div id="title">
                 <h1 class="title-l">Acmofy</h1>
-                <h2 class="title-m dark-grey">A internal tool for Mercadona support agents that improved ticket
+                <h2 class="title-m medium-grey">A internal tool for Mercadona support agents that improved ticket
                     resolution
                     efficiency by 58 seconds, <span class="green">saving over 400 work hours annually.</span></h2>
             </div>
             <div id="project-data">
                 <div class="data-column">
                     <p class="paragraph-m-xs">Product Designer</p>
-                    <p class="paragraph-r-xs dark-grey">Alberto Lucas</p>
+                    <p class="paragraph-r-xs medium-grey">Alberto Lucas</p>
                 </div>
                 <div class="data-column">
                     <p class="paragraph-m-xs">Product Manager</p>
-                    <p class="paragraph-r-xs dark-grey">Lara Tessi</p>
+                    <p class="paragraph-r-xs medium-grey">Lara Tessi</p>
                 </div>
                 <div class="data-column">
                     <p class="paragraph-m-xs">Tech Lead</p>
-                    <p class="paragraph-r-xs dark-grey">Enrique Palenque</p>
+                    <p class="paragraph-r-xs medium-grey">Enrique Palenque</p>
                 </div>
                 <div class="data-column">
                     <p class="paragraph-m-xs">Process Owner</p>
-                    <p class="paragraph-r-xs dark-grey">Esperanza Fuerte</p>
+                    <p class="paragraph-r-xs medium-grey">Esperanza Fuerte</p>
                 </div>
             </div>
 
@@ -76,7 +79,7 @@ if (!isset($_SESSION['auth']) || $_SESSION['auth'] !== true) {
         </section>
         <section class="project-section">
             <div class="section-title">
-                <h3 class="title-s dark-grey">Overview</h3>
+                <h3 class="title-s light-grey">Overview</h3>
                 <h4 class="title-xl">Customer support for +20K daily orders</h4>
             </div>
             <div class="section-text">
@@ -103,7 +106,7 @@ if (!isset($_SESSION['auth']) || $_SESSION['auth'] !== true) {
         </section>
         <section class="project-section">
             <div class="section-title">
-                <h3 class="title-s dark-grey">Discover</h3>
+                <h3 class="title-s light-grey">Discover</h3>
                 <h4 class="title-xl">Understanding the problem</h4>
             </div>
             <div class="section-text">
@@ -146,7 +149,7 @@ if (!isset($_SESSION['auth']) || $_SESSION['auth'] !== true) {
         </section>
         <section class="project-section">
             <div class="section-title">
-                <h3 class="title-s dark-grey">Insights</h3>
+                <h3 class="title-s light-grey">Insights</h3>
                 <h4 class="title-xl">Multitasking between multiple apps</h4>
             </div>
             <div class="section-text">
@@ -175,7 +178,7 @@ if (!isset($_SESSION['auth']) || $_SESSION['auth'] !== true) {
         </section>
         <section class="project-section">
             <div class="section-title">
-                <h3 class="title-s dark-grey">Explore</h3>
+                <h3 class="title-s light-grey">Explore</h3>
                 <h4 class="title-xl">Finding a better experience</h4>
             </div>
             <div class="section-text">
@@ -204,7 +207,7 @@ if (!isset($_SESSION['auth']) || $_SESSION['auth'] !== true) {
             <div class="line-title-paragraph">
                 <div class="line-title">
                     <div class="line"></div>
-                    <h6 class="paragraph-m-m dark-grey">Solution</h6>
+                    <h6 class="paragraph-m-m light-grey">Solution</h6>
                 </div>
                 <p class="paragraph-r-s">We implemented this solution in small steps, releasing iterations to production
                     that provided value to the agents from the beginning.</p>
@@ -215,7 +218,7 @@ if (!isset($_SESSION['auth']) || $_SESSION['auth'] !== true) {
         </section>
         <section class="project-section">
             <div class="section-title">
-                <h3 class="title-s dark-grey">Test</h3>
+                <h3 class="title-s light-grey">Test</h3>
                 <h4 class="title-xl">Testing with users</h4>
             </div>
             <div class="section-text">
@@ -242,7 +245,7 @@ if (!isset($_SESSION['auth']) || $_SESSION['auth'] !== true) {
         </section>
         <section class="project-section">
             <div class="section-title">
-                <h3 class="title-s dark-grey">Impact</h3>
+                <h3 class="title-s light-grey">Impact</h3>
                 <h4 class="title-xl">Over 400 work hours saved annually</h4>
             </div>
             <div class="section-text">
@@ -263,7 +266,7 @@ if (!isset($_SESSION['auth']) || $_SESSION['auth'] !== true) {
         </section>
         <section class="project-section last">
             <div class="section-title">
-                <h3 class="title-s dark-grey">Listen</h3>
+                <h3 class="title-s light-grey">Listen</h3>
                 <h4 class="title-xl">Next steps</h4>
             </div>
             <div class="section-text">
@@ -279,10 +282,9 @@ if (!isset($_SESSION['auth']) || $_SESSION['auth'] !== true) {
     </main>
     <footer>
         <div class="copyright">
-            <p class="paragraph-r-s dark-grey">© 2025 Alberto Lucas</p>
-            <a class="paragraph-r-s dark-grey desktop"
-                href="mailto:albertolucasperez@gmail.com">albertolucasperez@gmail.com
-                ↗</a>
+            <p class="paragraph-r-s light-grey">© 2025 Alberto Lucas</p>
+            <a class="paragraph-r-s light-grey desktop"
+                href="mailto:albertolucasperez@gmail.com">albertolucasperez@gmail.com</a>
         </div>
     </footer>
 </body>
