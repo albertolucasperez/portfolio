@@ -86,7 +86,7 @@ if (!isset($_SESSION['auth']) || $_SESSION['auth'] !== true) {
 
     <footer>
         <div class="copyright">
-            <p class="paragraph-r-s light-grey">© 2025 Alberto Lucas</p>
+            <p class="paragraph-r-s light-grey">© 2026 Alberto Lucas</p>
             <a class="paragraph-r-s light-grey desktop"
                 href="mailto:albertolucasperez@gmail.com">albertolucasperez@gmail.com</a>
         </div>
