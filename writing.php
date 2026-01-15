@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-X40FKCQTN5"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-X40FKCQTN5');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:image" content="https://albertolucasperez.com/images/writing/cover.png">
+    <meta name="description" content="Thoughts on design, leadership, and building products.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/writing.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+    <title>Alberto Lucas - Writing</title>
+</head>
+
+<body>
+    <header>
+        <div id="navbar">
+            <a id="logo" href="index.html">
+                <p>Alberto Lucas</p>
+            </a>
+            <nav>
+                <a class="navlink" href="work.php">Work</a>
+                <a class="navlink-current" href="writing.php">Writing</a>
+                <a class="navlink" target="_blank" href="Alberto Lucas.pdf">Resume</a>
+                <a class="navlink" target="_blank" href="https://www.linkedin.com/in/alberto-lucas-perez/">Linkedin</a>
+                <a class="navlink" href="mailto:albertolucasperez@gmail.com">Email</a>
+                <label id="contact-button-mobile" for="mobile-menu-toggle">Menu</label>
+            </nav>
+        </div>
+        <input type="checkbox" id="mobile-menu-toggle" class="check">
+        <div id="mobile-navbar">
+            <a class="navlink-mobile" href="work.php">Work</a>
+            <a class="navlink-mobile" href="writing.php">Writing</a>
+            <a class="navlink-mobile" href="Alberto Lucas.pdf">Resume</a>
+            <a class="navlink-mobile" target="_blank"
+                href="https://www.linkedin.com/in/alberto-lucas-perez/">Linkedin</a>
+            <a class="navlink-mobile" href="mailto:albertolucasperez@gmail.com">Email</a>
+            <label id="contact-button-close" for="mobile-menu-toggle" aria-label="Close menu">×</label>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div id="title">
+                <h1 class="title-l">Writing</h1>
+                <h2 class="title-s medium-grey">Thoughts on design, leadership, and building products.</h2>
+            </div>
+        </section>
+
+        <section id="posts">
+            <!-- Example post - Replace this with your actual posts -->
+            <a href="writing/ejemplo-post" class="post-card">
+                <img src="https://via.placeholder.com/600x338/F2F3F4/63635E?text=Post+Cover" alt="Post cover" class="post-cover">
+                <div class="post-content">
+                    <time class="post-date paragraph-r-xxs light-grey">January 15, 2026</time>
+                    <h3 class="post-title paragraph-m-m dark-grey">Título de tu Post de Ejemplo</h3>
+                    <p class="post-excerpt paragraph-r-s medium-grey">Este es un post de ejemplo para mostrarte cómo funcionará tu nueva sección de blog. Aquí puedes escribir tus pensamientos sobre diseño, liderazgo y productos.</p>
+                </div>
+            </a>
+
+            <!-- Add more posts here following the same structure -->
+        </section>
+    </main>
+
+    <footer>
+        <div class="copyright">
+            <p class="paragraph-r-s light-grey">© 2026 Alberto Lucas</p>
+            <a class="paragraph-r-s light-grey desktop"
+                href="mailto:albertolucasperez@gmail.com">albertolucasperez@gmail.com</a>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+        const docRoot = document.documentElement;
+
+        mobileMenuToggle?.addEventListener('change', () => {
+            [document.body, docRoot].forEach((node) => {
+                node.classList.toggle('menu-open', mobileMenuToggle.checked);
+            });
+        });
+    </script>
+</body>
+
+</html>
