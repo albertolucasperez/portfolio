@@ -56,25 +56,28 @@
     </header>
 
     <main>
-        <section id="hero">
-            <div id="title">
-                <h1 class="title-l">Writing</h1>
-                <h2 class="title-s medium-grey">Thoughts on design, leadership, and building products.</h2>
-            </div>
-        </section>
+        <section id="writing-content">
+            <h1 class="title-l">Writing</h1>
 
-        <section id="posts">
-            <!-- Example post - Replace this with your actual posts -->
-            <a href="writing/ejemplo-post" class="post-card">
-                <img src="https://via.placeholder.com/600x338/F2F3F4/63635E?text=Post+Cover" alt="Post cover" class="post-cover">
-                <div class="post-content">
-                    <time class="post-date paragraph-r-xxs light-grey">January 15, 2026</time>
-                    <h3 class="post-title paragraph-m-m dark-grey">Título de tu Post de Ejemplo</h3>
-                    <p class="post-excerpt paragraph-r-s medium-grey">Este es un post de ejemplo para mostrarte cómo funcionará tu nueva sección de blog. Aquí puedes escribir tus pensamientos sobre diseño, liderazgo y productos.</p>
+            <div id="posts">
+                <div class="post-item">
+                    <time class="post-date paragraph-r-s light-grey">October 31, 2025</time>
+                    <a href="writing/ejemplo-post.php" class="post-title dark-grey">What is taste? Are you born with it or is it developed?</a>
                 </div>
-            </a>
-
-            <!-- Add more posts here following the same structure -->
+                <div class="post-item">
+                    <time class="post-date paragraph-r-s light-grey">December 9, 2024</time>
+                    <a href="writing/your-users-dont-understand-formulas.php" class="post-title dark-grey">Your users don't understand formulas</a>
+                </div>
+                <div class="post-item">
+                    <time class="post-date paragraph-r-s light-grey">September 14, 2024</time>
+                    <a href="writing/design-systems-70-years-ago.php" class="post-title dark-grey">Design systems were already trendy 70 years ago</a>
+                </div>
+                <div class="post-item">
+                    <time class="post-date paragraph-r-s light-grey">July 23, 2024</time>
+                    <a href="writing/if-you-have-to-explain-it.php" class="post-title dark-grey">If you have to explain it, it's not that good</a>
+                </div>
+                <!-- Add more posts here following the same structure -->
+            </div>
         </section>
     </main>
 

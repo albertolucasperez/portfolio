@@ -184,63 +184,54 @@ nav {
     display: none;
 }
 
-/* Back Button */
+/* Post Cover */
 
-#back-to-writing {
+#post-cover-wrapper {
     width: 90vw;
-    max-width: 1168px;
-    margin: 80px auto 0 auto;
+    max-width: 680px;
+    margin: 40px auto 0 auto;
 }
 
-#back-to-writing a {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    color: #454540;
-    transition: all 0.3s ease-in-out;
+#post-cover {
+    width: 100%;
 }
 
-#back-to-writing a:hover {
-    color: #0048F9;
-}
-
-#back-to-writing a::before {
-    content: "←";
-    font-size: 20px;
+#post-cover-wrapper figcaption {
+    text-align: center;
+    margin-top: 8px;
 }
 
 /* Post Header */
 
 #post-header {
     width: 90vw;
-    max-width: 1168px;
+    max-width: 680px;
     margin: 48px auto 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 16px;
-}
-
-#post-meta {
-    display: flex;
-    align-items: center;
     gap: 12px;
 }
 
-#post-meta time {
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+.back-link {
+    transition: color 0.3s ease-in-out;
 }
 
+.back-link:hover {
+    color: #0048F9;
+}
+
+
 #post-header h1 {
-    max-width: 80ch;
+    font-size: 32px;
 }
 
 /* Post Content */
 
 #post-content {
     width: 90vw;
-    max-width: 760px;
-    margin: 72px auto 0 auto;
+    max-width: 680px;
+    margin: 48px auto 0 auto;
+    color: #555555;
 }
 
 .post-section {
@@ -249,6 +240,7 @@ nav {
 
 .post-section h2 {
     margin-bottom: 16px;
+    font-weight: 500;
 }
 
 .post-section h3 {
@@ -273,19 +265,30 @@ nav {
 
 .post-section img {
     width: 100%;
-    border-radius: 16px;
     margin: 32px 0;
+}
+
+.post-section figure {
+    margin: 32px 0;
+}
+
+.post-section figure img {
+    margin: 0 0 8px 0;
+}
+
+.post-section figcaption {
+    text-align: center;
 }
 
 .post-section blockquote {
     font-family: "Cormorant Garamond", serif;
     font-style: italic;
     font-size: 22px;
+    font-weight: 400;
     line-height: 145%;
-    color: #63635E;
+    color: #222222;
     margin: 32px 0;
-    padding-left: 24px;
-    border-left: 3px solid #0048F9;
+    text-align: center;
 }
 
 /* Footer */
@@ -467,11 +470,10 @@ footer {
         font-size: 16px;
     }
 
-    /* Back Button */
+    /* Post Cover */
 
-    #back-to-writing {
-        width: calc(100vw - 64px);
-        margin: 40px auto 0 auto;
+    #post-cover {
+        max-height: 280px;
     }
 
     /* Post Header */
@@ -481,11 +483,15 @@ footer {
         margin: 32px auto 0 auto;
     }
 
+    #post-header time {
+        margin-top: 16px;
+    }
+
     /* Post Content */
 
     #post-content {
         width: calc(100vw - 64px);
-        margin: 48px auto 0 auto;
+        margin: 32px auto 0 auto;
     }
 
     .post-section {
@@ -493,7 +499,6 @@ footer {
     }
 
     .post-section img {
-        border-radius: 12px;
         margin: 24px 0;
     }
 
