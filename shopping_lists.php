@@ -41,8 +41,9 @@ if (!isset($_SESSION['auth']) || $_SESSION['auth'] !== true) {
             </a>
             <nav>
                 <a class="navlink-current" href="work.php">Work</a>
-                <a class="navlink" target=”_blank” href="Alberto Lucas.pdf">Resume</a>
-                <a class="navlink" target=”_blank” href="https://www.linkedin.com/in/alberto-lucas-perez/">Linkedin</a>
+                <a class="navlink" href="writing.php">Writing</a>
+                <a class="navlink" target="_blank" href="Alberto Lucas.pdf">Resume</a>
+                <a class="navlink" target="_blank" href="https://www.linkedin.com/in/alberto-lucas-perez/">Linkedin</a>
                 <a class="navlink" href="mailto:albertolucasperez@gmail.com">Email</a>
                 <label id="contact-button-mobile" for="mobile-menu-toggle">Menu</label>
             </nav>
@@ -51,8 +52,9 @@ if (!isset($_SESSION['auth']) || $_SESSION['auth'] !== true) {
             <input type="checkbox" id="mobile-menu-toggle" class="check">
             <div id="mobile-navbar">
                 <a class="navlink-mobile" href="work.php">Work</a>
+                <a class="navlink-mobile" href="writing.php">Writing</a>
                 <a class="navlink-mobile" href="Alberto Lucas.pdf">Resume</a>
-                <a class="navlink-mobile" target=”_blank”
+                <a class="navlink-mobile" target="_blank"
                     href="https://www.linkedin.com/in/alberto-lucas-perez/">Linkedin</a>
                 <a class="navlink-mobile" href="mailto:albertolucasperez@gmail.com">Email</a>
                 <label id="contact-button-close" for="mobile-menu-toggle" aria-label="Close menu">×</label>
