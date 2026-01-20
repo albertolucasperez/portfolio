@@ -4,7 +4,7 @@ $error = "";
 
 // Ejemplo de validación de contraseña
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $expectedPassword = "alberto2025"; // Cambia este valor por la contraseña deseada
+    $expectedPassword = "alberto2026"; // Cambia este valor por la contraseña deseada
     if ($_POST['password'] === $expectedPassword) {
         $_SESSION['auth'] = true;
         header("Location: work.php");
