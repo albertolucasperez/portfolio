@@ -63,7 +63,7 @@
                 <h2 class="title-s light-grey">Currently at Happening, based in Madrid.</h2>
             </div>
         </section>
-        <section id="about-intro">
+        <section id="about-intro" class="reveal">
             <img src="./images/home/about.png" alt="Profile picture">
             <h2 class="title-s medium-grey">With 10 years of experience, I focus on connecting design, strategy, and
                 business to create products that are both functional and meaningful.
@@ -77,14 +77,14 @@
                 mentoring other designers, and building clarity through thoughtful communication.
             </h2>
         </section>
-        <section id="talks">
+        <section id="talks" class="reveal">
             <p class="title-s medium-grey">
                 My passion for leadership and communication has led me to deliver talks on
                 design, aiming to inspire and
                 empower the design community.</p>
             <img class="blanco-negro" src="./images/home/talks-1.png" alt="Community talk">
         </section>
-        <section id="quote">
+        <section id="quote" class="reveal">
             <p class="quote medium-grey">"Alberto is an incredibly skilled and effective designer with a great eye for
                 detail. He consistently delivers high-quality work and has a strong ability to understand and interpret
                 client needs. His communication skills are exceptional, and he always keeps our clients updated
@@ -94,10 +94,10 @@
                 <p class="paragraph-r-xs medium-grey">Co-founder at A11.studio</p>
             </div>
         </section>
-        <section id="talks">
+        <section id="talks" class="reveal">
             <img class="blanco-negro" src="./images/home/talks-2.png" alt="Community talk">
         </section>
-        <section id="experience">
+        <section id="experience" class="reveal">
             <div class="experience-row">
                 <div class="experience-left">
                     <p class="paragraph-m-m dark-grey">Happening.xyz</p>
@@ -160,6 +160,18 @@
                 node.classList.toggle('menu-open', mobileMenuToggle.checked);
             });
         });
+
+        // Scroll reveal animation
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        revealElements.forEach(el => revealObserver.observe(el));
     </script>
 </body>
 
