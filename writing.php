@@ -56,7 +56,7 @@
     </header>
 
     <main>
-        <section id="writing-content">
+        <section id="writing-content" class="reveal">
             <h1 class="title-l">Writing</h1>
 
             <div id="posts">
@@ -97,6 +97,25 @@
             [document.body, docRoot].forEach((node) => {
                 node.classList.toggle('menu-open', mobileMenuToggle.checked);
             });
+        });
+
+        // Scroll reveal animation
+        const revealElements = document.querySelectorAll('.reveal');
+        const heroSection = document.getElementById('writing-content');
+
+        // Animate hero after a small delay on page load
+        setTimeout(() => heroSection?.classList.add('visible'), 100);
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        revealElements.forEach(el => {
+            if (el.id !== 'writing-content') revealObserver.observe(el);
         });
     </script>
 </body>

@@ -258,6 +258,19 @@ footer {
     color: #0048F9;
 }
 
+/* Scroll Reveal Animation */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* Responsive Design */
 
 @media (max-width: 767px) {

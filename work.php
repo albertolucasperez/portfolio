@@ -64,14 +64,14 @@ if (!isset($_SESSION['auth']) || $_SESSION['auth'] !== true) {
     </header>
 
     <main>
-        <section id="hero">
+        <section id="hero" class="reveal">
             <div id="title">
                 <h1 class="title-l">Case studies</h1>
                 <h2 class="title-s medium-grey">Examples of projects where I led product design, creating solutions for
                     internal teams and large-scale e-commerce.</h2>
             </div>
         </section>
-        <section id="work">
+        <section id="work" class="reveal">
             <a href="acmofy.php">
                 <div class="project">
                             <div class="title-intro">
@@ -103,6 +103,27 @@ if (!isset($_SESSION['auth']) || $_SESSION['auth'] !== true) {
                 href="mailto:albertolucasperez@gmail.com">albertolucasperez@gmail.com</a>
         </div>
     </footer>
+
+    <script>
+        // Scroll reveal animation
+        const revealElements = document.querySelectorAll('.reveal');
+        const heroSection = document.getElementById('hero');
+
+        // Animate hero after a small delay on page load
+        setTimeout(() => heroSection?.classList.add('visible'), 100);
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        revealElements.forEach(el => {
+            if (el.id !== 'hero') revealObserver.observe(el);
+        });
+    </script>
 </body>
 
 </html>

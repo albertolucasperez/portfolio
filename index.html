@@ -57,7 +57,7 @@
     </header>
 
     <main>
-        <section id="hero">
+        <section id="hero" class="reveal">
             <div id="title">
                 <h1 class="title-xl">Senior Product Designer</h1>
                 <h2 class="title-s light-grey">Currently at Happening, based in Madrid.</h2>
@@ -163,6 +163,11 @@
 
         // Scroll reveal animation
         const revealElements = document.querySelectorAll('.reveal');
+        const heroSection = document.getElementById('hero');
+
+        // Animate hero after a small delay on page load
+        setTimeout(() => heroSection?.classList.add('visible'), 100);
+
         const revealObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -171,7 +176,9 @@
             });
         }, { threshold: 0.1 });
 
-        revealElements.forEach(el => revealObserver.observe(el));
+        revealElements.forEach(el => {
+            if (el.id !== 'hero') revealObserver.observe(el);
+        });
     </script>
 </body>
 
